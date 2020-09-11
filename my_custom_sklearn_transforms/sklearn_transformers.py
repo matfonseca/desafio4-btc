@@ -20,8 +20,7 @@ class Smote(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         return self
     
-    def transform(self, data_to_smote):
-        data = pd.DataFrame.from_records(data= data_to_smote, columns=data_to_smote.columns)
+    def transform(self, data):
         # for reproducibility purposes
         seed = 100
         # SMOTE number of neighbors
